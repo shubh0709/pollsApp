@@ -1,10 +1,11 @@
 from django.urls import path
 
-from .views import detail, results, vote
+from .views import detail, results, vote, index
 
+app_name="app_polls"
 urlpatterns = [
     # ex: /polls/
-    # path("", views.index, name="index"),
+    path("", index, name="index"),
     # ex: /polls/5/
     path("<int:question_id>/", detail, name="detail"),
     # ex: /polls/5/results/
